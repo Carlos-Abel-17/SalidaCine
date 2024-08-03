@@ -68,6 +68,8 @@ function App() {
                 <p className="modal-small">Porsiacaso no la e visto, mentí 😁</p>
                 <p className="modal-label">Hora</p>
                 <p className="modal-info">6PM</p>
+                <p className="modal-label">FECHA</p>
+                <p className="modal-info">03/08/2024</p>
                 <p className="modal-smalls">Enviame el Pantallaso para alistarme mensa</p>
               </div>
             </div>
