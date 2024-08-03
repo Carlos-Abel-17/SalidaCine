@@ -1,0 +1,179 @@
+@keyframes jump {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+  }
+  
+  body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; 
+  }
+  
+  .todo {
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+    max-width: 100%;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center;
+    position: relative; 
+  }
+  
+  .botones {
+    display: flex;
+    gap: 1em; /* Espacio entre botones */
+  }
+  
+  .inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Puedes ajustar el padding si es necesario */
+  }
+  
+  h1 {
+    font-family: sans-serif;
+  }
+  
+  .boton-si-container, .boton-no-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .si {
+    background-color: rgb(42, 255, 42);
+    border: none;
+    border-radius: 0.2em;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px; /* Tamaño de padding fijo */
+    font-size: 16px; /* Tamaño de fuente fijo */
+  }
+  
+  .si.jump {
+    animation: jump 0.5s; /* Aplica la animación de salto */
+  }
+  
+  .no {
+    background-color: rgb(244, 30, 30);
+    border: none;
+    border-radius: 0.2em;
+    color: white;
+    cursor: pointer;
+    width: 100px; /* Tamaño fijo */
+    height: 40px; /* Tamaño fijo */
+  }
+  
+  /* Modal container */
+  .modal {
+    display: flex; /* Use flexbox to center the modal */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    justify-content: center; /* Center the modal */
+    align-items: center; /* Center the modal */
+   
+  }
+  
+  /* Modal content */
+  .modal-content {
+    border-radius: 1em;
+    background-color: #fefefe;
+    color: #000000; /* Text color set to black */
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    font-family: sans-serif;
+  }
+  
+  .modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .modal-body {
+    text-align: left;
+  }
+  
+  .modal-label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+  }
+  
+  .modal-info {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .modal-small {
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .modal-smalls {
+    font-size: 25px;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  
+  /* Efecto de zoom y sombra */
+.modal-content img {
+    width: 50%;
+    border: 2px solid #fefefe;
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+  
+  .modal-content img:hover {
+    transform: scale(1.1); /* Zoom al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5); /* Sombra más pronunciada */
+  }
+  
+  .modal-content {
+    background: url('./Intesamente.jpg') no-repeat center center;
+    background-size: cover; /* Asegura que la imagen cubra todo el área */
+    color: #ffffff; /* Texto en blanco para contraste */
+    padding: 20px;
+    border-radius: 1em;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    font-family: sans-serif;
+  }
+  
+  .modal-body {
+    background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente para el contenido */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .modal {
+    backdrop-filter: blur(5px); /* Desenfoque del fondo */
+  }
+  
+  
